@@ -6,8 +6,7 @@ import {
   EyeContainer,
   Body,
 } from "./Theme";
-import { ReactComponent as FilledEye } from "../assets/eye-fill.svg";
-import { ReactComponent as ShowPassEye } from "../assets/eye-show-pass.svg";
+
 
 
 interface InputControllerInfo {
@@ -71,15 +70,6 @@ export const InputController: FunctionComponent<InputControllerInfo> = ({
           ref={inputRef}
           {...register?.register(name, validation && validation)}
         />
-        {type == "password" && (
-          <EyeContainer>
-            {filledEye ? (
-              <ShowPassEye onClick={() => handleEyeClick()} />
-            ) : (
-              <FilledEye onClick={() => handleEyeClick()} />
-            )}
-          </EyeContainer>
-        )}
       </InputElementContainer>
       {<p>{errors && errors[name]?.message}</p>}
     </Body>

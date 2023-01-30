@@ -1,7 +1,7 @@
 import { combineReducers } from "@reduxjs/toolkit";
 import { persistReducer } from "redux-persist";
 import localforage from "localforage";
-import { authAPI, itemsAPI } from "../services/apis";
+import { navController } from "../services/apis";
 
 const authPersistConfig = {
   key: "auth",
@@ -10,12 +10,12 @@ const authPersistConfig = {
 };
 const authPersistReducer = persistReducer(
   authPersistConfig,
-  authAPI.authSlice.reducer
+  navController.navSlice.reducer
 );
 
 const reducers = combineReducers({
   auth: authPersistReducer,
-  items: itemsAPI.itemsSlice.reducer,
+  items: navController.navSlice.reducer,
 });
 
 export default reducers;
