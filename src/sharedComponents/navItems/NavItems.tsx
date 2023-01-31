@@ -3,16 +3,16 @@ import React from "react";
 const NavItems = () => {
   return (
     <section className="nav-list">
-      <a href="https://www.google.com/" target={"_blank"}>
+      <a>
         Browser
       </a>
-      <a href="https://www.google.com/" target={"_blank"}>
+      <a>
         Bootcamps
       </a>
-      <a href="https://www.google.com/" target={"_blank"}>
+      <a>
         How It works
       </a>
-      <a href="https://www.google.com/" target={"_blank"}>
+      <a>
         Testemonial
       </a>
     </section>
