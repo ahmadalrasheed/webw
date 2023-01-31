@@ -1,3 +1,0 @@
-export {
-    navSlice,
-} from './navigation';

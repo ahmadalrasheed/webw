@@ -23,6 +23,7 @@ interface InputControllerInfo {
   required?: boolean;
   errors?: any;
   validation?: any;
+  style?:any
 }
 
 export const InputController: FunctionComponent<InputControllerInfo> = ({
@@ -39,27 +40,16 @@ export const InputController: FunctionComponent<InputControllerInfo> = ({
   required,
   errors,
   validation,
+  style,
   ...rest
 }) => {
-  const inputRef = React.useRef<any>();
-  const [filledEye, setFilledEye] = React.useState<boolean>(true);
-  const handleEyeClick = () => {
-    
-    if (typeof(id) =='string' && document.getElementById(id) && document.getElementById(id)?.getAttribute('type') =="password") {
-      document.getElementById(id)?.setAttribute('type','text')
-      
-      setFilledEye(false);
-    } else if (typeof(id) =='string' && document.getElementById(id)) {
-      document.getElementById(id)?.setAttribute('type','password')
-
-      setFilledEye(true);
-    }
-  };
+  
   return (
     <Body>
       <InputElementContainer className={className}>
         <Label for={id} required={required}>{label}</Label>
         <InputElement
+          {...style}
           type={type}
           name={name}
           id={id && id}
@@ -67,7 +57,6 @@ export const InputController: FunctionComponent<InputControllerInfo> = ({
           value={value}
           defaultValue={defaultValue}
           placeholder={placeHolder}
-          ref={inputRef}
           {...register?.register(name, validation && validation)}
         />
       </InputElementContainer>

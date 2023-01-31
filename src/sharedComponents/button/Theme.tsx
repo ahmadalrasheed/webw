@@ -36,4 +36,15 @@ export const ButtonBody = styled.button<any>`
     css`
       color: ${props?.color};
     `}
+    ${(props) =>
+    props?.fontWeight &&
+    css`
+      font-weight: ${props.fontWeight};
+    `}
+    ${(props) =>
+    props?.borderRadius &&
+    css`
+      border-radius: ${props.borderRadius};
+      border: 0px;
+    `}
 `;

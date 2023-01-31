@@ -20,6 +20,11 @@ export const InputElement = styled.input<any>`
     background-color: #ebebe4;
     cursor: not-allowed;
   }
+  ${(props) =>
+    props?.borderRadius &&
+    css`
+      border-radius: ${props?.borderRadius};
+    `}
 `;
 export const Label = styled.label<any>`
   font-size: 18px;
