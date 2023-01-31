@@ -4,7 +4,7 @@ import { ButtonContainer } from "./Theme";
 
 const PrimaryButton = () => {
   return (
-    <ButtonContainer>
+    <ButtonContainer className="button-container">
       <img src={ButtonBackground} alt="logo" />
       <span>About Us</span>
     </ButtonContainer>

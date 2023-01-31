@@ -33,4 +33,18 @@ export const HeaderContainer = styled.header`
         font-weight:600;
     }
 }
+@media only screen and (max-width:1100px){
+    flex-direction: column;
+    .nav-list{
+        width:100%;
+        a{
+            text-align:center;
+        }
+    }
+    .button-container{
+        display:none;
+    }
+    gap:20px;
+    padding: 0 3vw;
+  }
 `;

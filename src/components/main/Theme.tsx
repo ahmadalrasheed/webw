@@ -50,7 +50,8 @@ overflow-x:hidden;
         top:100px;
         img{
             width:90%;
-            transform:rotate(-10deg)
+            transform:rotate(-10deg);
+            animation: flash 8s infinite;
         }
     }
 
@@ -61,10 +62,11 @@ overflow-x:hidden;
     .square-paylogon{
         position:absolute;
         right:-1100px;
-        top:850px;
+        top:650px;
         img{
             width:90%;
-            transform:rotate(-15deg)
+            transform:rotate(-15deg);
+            animation: flash 8s infinite;
         }
     }
 }
@@ -89,6 +91,31 @@ overflow-x:hidden;
   .primary-button-container{
     display:flex;
     justify-content:center;
+  }
+}
+
+@keyframes flash {
+  0% {
+    filter:brightness(1);
+
+  }
+  5% {
+    filter:brightness(1.2);
+  }
+  10% {
+    filter:brightness(1);
+  }
+  15% {
+    filter:brightness(0.9);
+  }
+  20% {
+    filter:brightness(1);
+  }
+  30% {
+    filter:brightness(0.9);
+  }
+  60% {
+    filter:brightness(1);
   }
 }
 
