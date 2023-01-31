@@ -52,7 +52,7 @@ export const Footer = () => {
         <Section>
           <ButtonInputContainer>
             <InputController
-              defaultValue={"Mail"}
+              placeHolder={"Mail.."}
               style={InputStyle}
               type="text"
               name="mail"
